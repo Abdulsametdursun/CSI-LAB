@@ -1,0 +1,109 @@
+if(11==11):
+  print("Hello")
+  print("World")
+print("OK")
+
+Grade = 60;
+if(Grade>=90):
+  print("A")
+elif (Grade>=80):
+  print("B")
+elif (Grade>=70):
+  print("C")
+elif (Grade>=60):
+  print("D")
+else:
+  print("F")
+
+Grade = 60;
+if(Grade<60):
+  print("F")
+elif (Grade<70):
+  print("D")
+elif (Grade<80):
+  print("C")
+elif (Grade<90):
+  print("B")
+else:
+  print("A")
+
+Grade = 14;
+if(Grade>=50 and Grade<=100):
+  print("Pass")
+else:
+  print("Fail")
+
+counter = 0
+while(counter<10):
+  print(" ",counter," A")
+  counter +=1
+
+myString = "This is string"
+
+for letters in myString:
+    if(letters=="a" or letters=="i"):
+      print(letters)
+
+for i in range(10):
+  print(i)
+
+#Exaples:
+for i in (1,2,3,4,45):
+  print(i)
+
+for i in "Hello World":
+  print(i)
+
+for i in range(20,30):
+  print(i)
+
+for i in range(50,20,-6):
+  print(i)
+
+for i in range(20,30):
+  print(i)
+
+#::::::::::::: SQUAR RULE :::::::::::::
+for i in range(10):
+  print(i**2)
+
+#::::::::::::IMPORTANT:::::::::::::::::
+#start =int(input("please enter start :"))
+#end = int(input("Please enter end :"))
+#for i in range(start,end):
+#  print(i**2)
+
+total=0
+for i in range(1,101):
+  total +=i
+print(total)
+
+total=0
+for i in range(1,101):
+  total = total + i
+  print("total:",total,"i:",i)
+
+#SONSOZ Hello
+#count=0
+#while(count<10):
+#  print("Hello")
+
+count=0
+while(count<10):
+  print("Hello")
+  count+=1
+
+#::::::::::QUESTIONS INFINITY::::::::::::::::
+#answer = input("Is pyhton fun? (y/n) : ")
+#while(answer!="y"):
+#  answer = input("Is pyhton fun? (y/n) : ")
+#print("Sure")
+
+#answer = input("Are you male : ")
+#while(answer!="y"):
+#  answer = input("Are you male : ")
+#print("Sure")
+
+for i in range(7):
+  for j in range(8):
+    print("i:",i,"j:",j)
