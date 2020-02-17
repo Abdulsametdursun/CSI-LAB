@@ -1,0 +1,68 @@
+count=0
+for i in range(5):
+  for j in range(3):
+    for k in range(4):
+      print("i:",i,"j:",j,"k:",k)
+    count+=1
+  
+  print(count)
+
+for i in range(0,10):
+  for j in range(1,10):
+    print(i,"x",j,"=",i*j)
+
+for i in range(0,10):
+  for j in range(1,10):
+    print(i,"x",j,"=",i*j)
+  print("-----------")
+
+print("Yo "*i)
+
+for i in range(1,21):
+  print("* "*i)
+
+def myFirstFunction():
+  print("Helloo")
+
+myFirstFunction()
+
+sentinel=True
+while(sentinel):
+  print("Hello")
+  sentinel=False
+
+sentinel=0
+while(sentinel<10):
+  print("Hello")
+  sentinel+=1
+
+while(False):
+  print("hellooo")
+
+#This function is void 
+def functionVoid():
+  print("Hello")
+  print("World")
+
+#This function returns String
+def functionReturnsString():
+  return "Hello"
+
+def addTwo():
+  return 2+2
+
+thisIsVariable=functionReturnsString()
+print(thisIsVariable)
+result=addTwo()
+result+=1
+print(result)
+
+def main():
+  def function1():
+    print("this is one")
+  def function2():
+    print("this is two")
+
+  function1()
+  function2()
+main()
