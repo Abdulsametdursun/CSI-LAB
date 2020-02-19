@@ -10,3 +10,14 @@ x=1
 while x < 50:
   print(x**(1/2))
   x+=2
+
+Question 3
+answer = input("Are you left handed ? ")
+while(answer!="yes"):
+  answer = input("Are you left handed ? ")
+print("good")
+
+Question 4
+answer = input("Are you left handed ? ")
+while(True):
+  answer = input("Are you left handed ? ")
