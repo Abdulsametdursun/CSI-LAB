@@ -1,0 +1,26 @@
+Question 1
+a=int(input("Enter your number: "))
+if(a%2 == 0):
+  print("Even number")
+elif(a%2 != 0):
+  print("Odd number")
+if(a%4 == 0):
+  print("can multiple of 4")
+
+check=int(input("First number: "))
+number=int(input("Seconf number: "))
+if(check%number == 0):
+  print("No remainder")
+else:
+  print("Not evenly divisible")
+
+Question 2
+b=int(input("Enter a integer number: "))
+if(0<b<10):
+  print(int(input("Enter another number: ")))
+elif(10<b<20):
+  print(str(input("Enter another for a string: ")))
+elif(20<b<100):
+  print("Your choice is between 20-100.")
+else:
+  print("Just practicing.")
