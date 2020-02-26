@@ -1,0 +1,14 @@
+#Question 1
+def funtion(a):
+  if len(a) == len(set(a)):
+    return True
+  else:
+    return False;
+print(funtion([1,5,7,9]))
+print(funtion([2,4,5,5,7,9]))
+
+#Question 2
+a = int(input("length of opposite side:"))
+b = int(input("lenght of adjacent side:"))
+c = ((a**2)+(b**2))**(1/2)
+print (c)
