@@ -1,0 +1,33 @@
+price_TV=float(input('What is the unit price of a TV?'))
+qty_tv=int(input('How Many TVs Were Sold?'))
+price_DVD=float(input('What is the unit price of a DVD player?'))
+qty_DVD=int(input('How Many DVD Players Were Sold?'))
+price_controller=float(input('What is the unit price of a Game Controller?'))
+qyt_controller=int(input('How Many Game Controllers Were Sold?'))
+price_console=float(input('What is the unit price of a Game Console?'))
+qty_console=int(input('How Many Game Consoles Were Sold?'))
+price_cell=float(input('What is the unit price of a Cell Phone?'))
+qty_cell=int(input('How Many Cell Phones Were Sold?'))
+
+extTV = price_TV*qty_tv
+extDVD = price_DVD*qty_DVD
+extController = price_controller*qyt_controller
+extPlayer = price_console*qty_console
+extCell = price_cell*qty_cell
+tax = 0.0825
+   
+subtotal = extTV + extDVD +extController +extPlayer + extCell    
+tax_deduct= tax*subtotal
+total = subtotal + tax_deduct 
+
+print("\nQTY          DESCRIPTION            UNIT PRICE               TOTAL PRICE ")
+print("\n========================================================================= ")
+print("\n",qty_tv,"               TV                  400.00                    ",extTV ,"     ")
+print("\n",qty_DVD,"               DVD                 220.00                    ",extDVD,"     ")
+print("\n",qyt_controller,"         Controller                 35.20                    ",extController,"     ")
+print("\n",qty_console,"            Console                 300.00                    ",extPlayer,"     ")
+print("\n",qty_cell,"          Cell Phone                150.00                    ",extCell,"     ")
+print("\n                                                       ----------------  " )            
+print("\n                                       SUBTOTAL              ", subtotal,"        ")                                            
+print("\n                                       TAX                   ",tax_deduct,"        ")
+print("\n                                       TOTAL                 ",total,"        ")
