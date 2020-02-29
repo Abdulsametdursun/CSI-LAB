@@ -1,0 +1,104 @@
+def get_input(): #function for getting the input
+
+    length =    int(input("Length of room (feet)?     ")) # type casting the input to int
+
+    width =     int(input("Width of room (feet)?      ")) # type casting the input to int
+
+    discount =  float(input("Customer discount (percent)?    ")) # type casting the input to float
+
+    cost =      float(input("Cost per square foot (XXX.XX)?  ")) # type casting the input to float
+
+    return length, width, discount, cost
+
+def caluculate(length, width, discount, cost): #function for calculating
+
+    def installed_price_calc(length, width, discount, cost): #sub function for calculating area, installed price, labour cost and carpet cost
+
+        area = length * width
+
+        carpet_cost= area * cost
+
+        labor_cost=  area * .35
+
+        installed_price= labor_cost + carpet_cost
+
+        return area,carpet_cost,labor_cost,installed_price
+
+    def subtotal_calc(carpet_cost,labor_cost,installed_price): #sub function for calculating discount amount and subtotal
+
+        discount_cost =  installed_price *  discount /100
+
+        subtotal =  installed_price -  discount_cost
+
+        return discount_cost,subtotal
+
+    def price(discount_cost,subtotal): #sub function for calculating tax and total
+
+        tax =  subtotal * .085
+
+        total =  subtotal + tax
+
+        return tax,total
+
+    area,carpet_cost,labor_cost,installed_price = installed_price_calc(length, width, discount, cost) #function call to subfuction inside the function
+
+    discount_cost,subtotal = subtotal_calc(carpet_cost,labor_cost,installed_price)
+
+    tax,total = price(discount_cost,subtotal)
+
+    return area,carpet_cost,labor_cost,installed_price,discount_cost,subtotal,tax,total
+
+def print_results(length,width,cost,discount,area,carpet_cost,labor_cost,installed_price,discount_cost,subtotal,tax,total):
+
+    def print_measurements(length,width,area): #sub function for printing measurements
+
+        print ("MEASUREMENTS".center(40), "\n")
+
+        print ("Length" + "%d ft\n".rjust(40) % (length))
+
+        print ("Width" + "%d ft\n".rjust(41) % (width))
+
+        print ("Area" + "%d square ft\n".rjust(48) % (area))
+
+    def print_charges(cost,discount,carpet_cost,labor_cost,installed_price,discount_cost,subtotal,tax,total):
+
+        #sub function for printing charges involved
+
+        
+
+        print ("CHARGES".center(50), "\n")
+
+        print ("DESCRIPTION" + "COST/SQ.FT".center(20)+ "CHARGES\n".rjust(20))
+
+        print ("Carpet" + "%f".center(20) % (cost) + "$%f\n".rjust(20) % (carpet_cost))
+
+        print ("Labor" + "0.35".center(20) + "%f\n".rjust(20) % (labor_cost))
+
+        print ("INSTALLED PRICE" + "$%d\n".rjust(40) % (installed_price))
+
+        print ("Discount" + "%f".center(20) % (discount) + "%d\n".rjust(40) % (discount_cost))
+
+        print ("SUBTOTAL" + "$%d\n".rjust(40) % (subtotal))
+
+        print ("Tax" + "%d\n".rjust(40) % (tax))
+
+        print ("TOTAL" + "$%f\n".rjust(40) % (total))
+
+    
+
+    print_measurements(length,width,area)
+
+    print_charges(cost,discount,carpet_cost,labor_cost,installed_price,discount_cost,subtotal,tax,total)
+
+def main(): # definitino of main function
+
+    length, width, discount, cost = get_input()
+
+    area,carpet_cost,labor_cost,installed_price,discount_cost,subtotal,tax,total = caluculate(length, width, discount, cost)
+
+    print_results(length,width,cost,discount,area,carpet_cost,labor_cost,installed_price,discount_cost,subtotal,tax,total)
+
+if __name__ == "__main__":
+
+    main()
+
