@@ -1,0 +1,116 @@
+#Thirt line is gone print if you put something
+def thisIsMyFun(param1=9):
+  print(param1)
+thisIsMyFun()
+
+def thisIsMyFun(param2,param1=9):
+  print(param1, param2)
+thisIsMyFun("asdf",78)
+
+def thisIsMyFun(param2,param1=9):
+  print(param2, param1)
+thisIsMyFun("asdf",78)
+
+#This is void
+#def function1()
+#  a=20
+#  b=30
+#  b=a
+
+#This is returning function
+#def function2()
+#  a=20
+#  b=30
+#  b=a
+#  return b
+
+#x=function2
+#y=function1
+#print(x,y)
+
+def add(a,b):
+  return a+b
+def multiply(a,b):
+  return a*b
+
+a=12
+b=5
+c=7
+x=multiply(add(a,b),c)
+print(x)
+
+#reversed it
+text="Pyton rocks"
+def reverseString(text):
+  for letter in range(len(text)-1,-1,-1):
+    print(text[letter],end="")
+
+#return it
+def reverseReturn(text):
+  result=""
+  for letter in range(len(text)-1,-1,-1):
+    result=result+text[letter]
+
+  return result
+#"s" = ""+"s"
+#"sk"="s"+"k"
+#"skc"="sk"+"c"
+#print(reverseReturn("rececar"))
+
+#def palindrome(text)
+#reversedText=reverseReturn(text)
+#if(reversedText==text):
+# print("palindrome")
+#else
+# print("not palindrome")
+
+#myFunc is coming from different page.
+import abcd
+abcd.myFunc()
+
+#Printing random number
+import random
+print(random.randint(1,100))
+
+#End of the line "10" is means (random.10)
+result=random.randrange(10,100,10)
+print(result)
+
+for i in range(20):
+  result=random.randrange(10,100,5)
+  print(result)
+
+print(ord('a'))
+print(chr(97))
+
+def generatePassport():
+  for i in range(8):
+    print(chr(random.randint(97,112)),end="")
+    
+generatePassport()
+
+def function3():
+  print("a")
+def function4():
+  return "b"
+
+x=function3()
+y=function4()
+
+print(x,y)
+
+#Write a python function returns boolean value if input is palindrome
+
+def is_palindrome(text):
+  result=True
+  reversed=""
+  for i in range(len(text)-1,-1,-1):
+    reversed+=text[i]
+  if(reversed==text):
+    result=False
+  else:
+    result=True
+  
+  return result
+
+print(is_palindrome("madam"))
