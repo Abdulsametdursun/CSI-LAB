@@ -1,0 +1,90 @@
+import math
+
+print(math.sin(math.pi))
+print(math.ceil(4.6))
+#print(math.ceil(4.0001))
+print(math.floor(4.1))
+#print(math.floor(4.9))
+
+word="Hello World"
+
+for letter in word:
+  print(letter, end="-")
+
+#Only showing the one letter [0,1,2,3...]
+print("Hello world"[0])
+print("abc"[2])
+print("abc"[-1])
+
+word="Hello"
+for i in range(len(word)):
+  print(word[i])
+
+word1="Hello"
+word2="12345"
+#targetWord="H1e2l3l4o5"
+for i in range(len(word1)):
+  print(word1[i],end="")
+  print(word2[i],end="")
+
+word3="Hello"
+word4="World"
+new_word=""
+for i in range(len(word3)):
+  new_word=word3[i]+word4[i]
+  print(new_word)
+
+print("ABCDEFG"[5:])
+
+letters="ABCDEFGHIJKLMOPRS"
+print(letters[::2])
+print(letters[::-1])
+print("A" in letters)
+print("Q" in letters)
+
+our_string="aaabbbccc"
+result=""
+for letter in our_string:
+  if (letter not in result):
+    result+=letter
+print(result)
+
+print("asd".islower())
+#print("asd".endswith(d))
+
+test1="Afgdfg"
+test2="Cdfsdf"
+test3="Kfdasfa"
+
+def test_my_String(my_str):
+  if(test2.startswith("A") or test2.startswith("B") or test2.startswith ("C")):
+    print("OK")
+  else:
+    print("NOT OK")
+
+test_my_String(test1)
+test_my_String(test2)
+test_my_String(test3)
+
+print("Houston strong".find("asd"))
+print("Houston strong".replace("strong","powerful"))
+
+print("X"*10)
+for i in range(1,5):
+  print("* "*i)
+
+sentence = "We are in love with Python"
+words =sentence.split()
+print(words)
+for word in words:
+  print(word)
+
+sentence = "We Houston are in love with Python Houston "
+words = sentence.split()
+
+#Counting to words
+counter=0
+for word in words:
+  if(word=="Houston"):
+    counter+=1
+print(counter)
