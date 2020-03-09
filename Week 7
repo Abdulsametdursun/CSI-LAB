@@ -1,0 +1,67 @@
+#Write a Python program to find a list have vowel
+#mylist=["a","k","h","r"]
+
+#def isContainsVowel(list_input):
+#  result="a" in list_input or "e" in list_input
+
+#  if(result):
+#    print("There is vowel")
+#  else:
+#    print("There is no vowel")
+
+#isContainsVowel(mylist)
+
+#Write a Python program to find a list have vowel2
+#product_ids=["asd3","efg67","3vh2","3rwef"]
+#search=input("enter id: ")
+#if(search in product_ids):
+#  print("We have that item")
+#else:
+#  print("we do not have that item")
+
+sentence = "We are fan of Python"
+splitted = sentence.split()
+print(splitted)
+sentence = "We are fan of Python"
+splitted = sentence.split(",")
+print(splitted)
+for word in splitted:
+  print(word)
+
+sentence1 = "Can a fish fish a fish in a fish can"
+def find_number_of_words(sentence1, word_to_count):
+  number_of_word=0
+  words=sentence1.split()
+  for word in words:
+    if(word==word_to_count):
+      number_of_word+=1
+  return number_of_word
+
+print(find_number_of_words(sentence1,"fish"))
+
+first_list=[1,"2",3.8,'c',4,5]
+print(first_list)
+for number in first_list:
+  print(number)
+print(list("asfghafdg"))
+
+my_list=[3,1,7,34,8]
+print(my_list[0])
+print(my_list[3])
+print(my_list[-1])
+print(len(my_list))
+my_list[0]=8888
+print(my_list)
+
+list1=[1,2,3,4,5]
+list2=[6,7,8,9,10]
+#list3=list1+4 Giving Error bc of 4
+list3=list1+list2
+print(list3)
+list1+=list1
+print(list1[::])
+print(list1[:4])
+print(list1[0:2])
+print(list1[4:8])
+print(list2[::-1])
+print(list2[::-2])
