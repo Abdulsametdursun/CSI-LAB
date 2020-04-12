@@ -1,0 +1,81 @@
+nums = [] #list to store numbers
+def main():
+  
+  while(1):
+    nums.clear() #to clear the list after each iteration
+    displayOperation() #show user the list of operations
+    try:
+      inp = int(input()) #get the choice of operation
+    except:
+      print("Invalid input") #check for invalid input
+      continue
+#depending on the choice execute an operation
+    if inp == 1:
+      smallestNum()
+    elif inp == 2:
+      largestNum()
+    elif inp == 3:
+      sumNum()
+    elif inp == 4:
+      averageNum()
+    elif inp == 5:
+      break #if user chooses 5 we end the program
+    else:
+      print('Invalid Input') #print if output is invalid
+  
+def displayOptions(): #to get the numbers of the users
+  print('Enter the five numbers')
+  while(1):
+    try:
+      inp = int(input())
+    except:
+      print('Invalid Input') #check for invalid input like float or char
+      continue
+    if inp < 25 and inp > 250: #check if the number is in the range
+      print('Value must be in the range 25 to 250')
+      continue
+    nums.append(inp) #if number is valid append it to the list
+    if len(nums) >= 5: #if user enters 5 numbers then break
+      break
+
+def displayOperation(): #List if operations
+  print('Choose an operation')
+  print('1. Smallest of the numbers')
+  print('2. largest of the numbers')
+  print('3. Sum of the numbers')
+  print('4. Average of the numbers')
+  print('5. End')
+  
+def smallestNum(): #logic to find the smallest of the numbers
+  displayOptions() #function to get the list of numbers
+  smallest = nums[0]
+  for item in nums:
+    if item< smallest:
+      smallest = item
+  print(f'Smallest number is {smallest}')
+  
+def largestNum(): #function to find the largest of the numbers
+  displayOptions() #function to get the list of numbers
+  largest = nums[0]
+  for item in nums:
+    if item > largest:
+      largest = item
+  print(f'Largest number is {largest}')
+  
+def sumNum(): #function to find the sum of numbers
+  displayOptions() #function to get the list of numbers
+  sum = 0
+  for item in nums:
+    sum += item
+  print(f'Sum of numbers is {sum}')
+  
+def averageNum(): #function to find the average of numbers
+  displayOptions() #function to get the list of numbers
+  sum = nums[0]
+  avg = 0
+  for item in nums:
+    sum += item
+  avg = sum/len(nums)
+  print(f'Average number is {avg}')
+
+main() #call the main function
